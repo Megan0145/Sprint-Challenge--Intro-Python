@@ -44,7 +44,11 @@ class FlightVehicle(Vehicle):
 
 class Airplane(FlightVehicle):
     def __init__(self):
-        pass        
+        pass    
+
+class Starship(FlightVehicle):
+    def __init__(self):
+        pass          
 
 # now, each sublass of vehicle class can call super.__init__([attributes]) in their constructor method, 
 # passing in the attributes they would like to inherit from the vehicle class and so on    
