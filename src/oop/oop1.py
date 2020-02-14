@@ -23,3 +23,8 @@
 class Vehicle:
     def __init__(self):
         pass
+
+# base class for ground vehicles
+class GroundVehicle(Vehicle):
+    def __init__(self):
+        pass
