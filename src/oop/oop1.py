@@ -29,6 +29,13 @@ class GroundVehicle(Vehicle):
     def __init__(self):
         pass
 
+class Car(GroundVehicle):
+    def __init__(self):
+        pass
+
+class Motorcycle(GroundVehicle):
+    def __init__(self):
+        pass    
 
 # base class for flight vehicles
 class FlightVehicle(Vehicle):
