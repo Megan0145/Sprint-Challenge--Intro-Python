@@ -46,6 +46,12 @@ cityreader(cities)
 for c in cities:
     print(c)
 
+# The function above does not need to be modified because I have added the __str__ method to City class
+# If I hadn't done this, the function below would print relevant information for each city;
+
+# for c in cities:
+#   print(f'Name: {c.name}, Lat: {c.lat}, Lon:  {c.lon}')    
+
 # STRETCH GOAL!
 #
 # Allow the user to input two points, each specified by latitude and longitude.
