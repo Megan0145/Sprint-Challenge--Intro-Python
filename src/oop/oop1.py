@@ -41,3 +41,7 @@ class Motorcycle(GroundVehicle):
 class FlightVehicle(Vehicle):
     def __init__(self):
         pass    
+
+class Airplane(FlightVehicle):
+    def __init__(self):
+        pass        
