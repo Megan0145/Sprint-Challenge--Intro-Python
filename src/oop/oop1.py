@@ -24,7 +24,7 @@ class Vehicle:
     def __init__(self):
         pass
 
-# base class for ground vehicles
+# generic base class for ground vehicles
 class GroundVehicle(Vehicle):
     def __init__(self):
         pass
@@ -37,7 +37,7 @@ class Motorcycle(GroundVehicle):
     def __init__(self):
         pass    
 
-# base class for flight vehicles
+# generic base class for flight vehicles
 class FlightVehicle(Vehicle):
     def __init__(self):
         pass    
@@ -45,3 +45,6 @@ class FlightVehicle(Vehicle):
 class Airplane(FlightVehicle):
     def __init__(self):
         pass        
+
+# now, each sublass of vehicle class can call super.__init__([attributes]) in their constructor method, 
+# passing in the attributes they would like to inherit from the vehicle class and so on    
