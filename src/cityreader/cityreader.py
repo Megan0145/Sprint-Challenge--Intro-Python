@@ -43,8 +43,8 @@ cityreader(cities)
 
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-# for c in cities:
-#     print(c)
+for c in cities:
+    print(c)
 
 # The function above does not need to be modified because I have added the __str__ method to City class
 # If I hadn't done this, the function below would print relevant information for each city;
