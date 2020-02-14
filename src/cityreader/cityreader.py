@@ -43,8 +43,8 @@ cityreader(cities)
 
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-for c in cities:
-    print(c)
+# for c in cities:
+#     print(c)
 
 # The function above does not need to be modified because I have added the __str__ method to City class
 # If I hadn't done this, the function below would print relevant information for each city;
@@ -83,6 +83,9 @@ for c in cities:
 
 # TODO Get latitude and longitude values from the user
 
+coords1 = input("Enter lat1,lon1: ").split(',')
+coords2 = input("Enter lat2,lon2: ").split(',')
+
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # within will hold the cities that fall within the specified region
   within = []
@@ -91,4 +94,23 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
   # Go through each city and check to see if it falls within 
   # the specified coordinates.
 
+  # make sure all input is type cast to float
+  lat1 = float(lat1)
+  lon1 = float(lon1)
+  lat2 = float(lat2)
+  lon2 = float(lon2)
+
+  for city in cities:
+    # check to see if latitude's within range
+    if lat1 > city.lat > lat2 or lat2 > city.lat > lat1:
+      # check to see if longitude's within range
+      if lon1 > city.lon > lon2 or lon2 > city.lon > lon1:
+        # if so, append city to 'within' list
+        within.append(city)
+
   return within
+
+test = cityreader_stretch(coords1[0], coords1[1], coords2[0], coords2[1], cities)
+
+for c in test:
+  print(c)
